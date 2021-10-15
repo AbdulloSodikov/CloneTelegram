@@ -7,6 +7,8 @@ import com.ak.sodikov.clonetelegram.databinding.ActivityMainBinding
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
+import com.mikepenz.materialdrawer.DrawerBuilder
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
 
 
@@ -34,17 +36,39 @@ class MainActivity : AppCompatActivity() {
         initFunction ()
     }
 
+
     private fun initFunction() {
        setSupportActionBar(mToolbar) // Передача  ToolBar
+       createHeader()  //
+       createDrawer()
 
     }
+
+// Фунция для создания Header
     private fun createHeader(){
         mHeader = AccountHeaderBuilder()
             .withActivity(this)
-            .withHeaderBackground(R.drawable.header)
+            .withHeaderBackground(R.drawable.header) // Передаем Layout для Header
             .addProfiles(
                 ProfileDrawerItem().withName("Абдулло Содиков")
                     .withEmail("+992918865861")
             ).build()
         }
+// Функция для создания выдвежного меню (Drawer)
+    private fun createDrawer (){
+        mDrawer = DrawerBuilder()
+            .withActivity(this)   // передаем активити
+            .withToolbar(mToolbar) // передает ToolBar
+            .withActionBarDrawerToggle(true) // ?
+            .withSelectedItem(-1) //  окно по умолчанию
+            .withAccountHeader(mHeader) // передаем Header
+            .addDrawerItems(
+                PrimaryDrawerItem().withIdentifier(100)
+                    .withIconTintingEnabled(true)
+                    .withName("Создать группу")
+                    .withSelectable(false)
+            ).build()
+    }
+
+
     }
