@@ -50,8 +50,9 @@ class MainActivity : AppCompatActivity() {
             .withActivity(this)
             .withHeaderBackground(R.drawable.header) // Передаем Layout для Header
             .addProfiles(
-                ProfileDrawerItem().withName("Абдулло Содиков")
-                    .withEmail("+992918865861")
+                ProfileDrawerItem()
+                    .withName("Абдулло Содиков") // Поле для имени владелца
+                    .withEmail("+992918865861") //
             ).build()
         }
 // Функция для создания выдвежного меню (Drawer)
@@ -69,6 +70,4 @@ class MainActivity : AppCompatActivity() {
                     .withSelectable(false)
             ).build()
     }
-
-
-    }
+}
