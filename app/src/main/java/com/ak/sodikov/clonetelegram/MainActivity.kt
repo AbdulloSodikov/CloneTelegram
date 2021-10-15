@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.ak.sodikov.clonetelegram.databinding.ActivityMainBinding
+import com.ak.sodikov.clonetelegram.ui.ChatsFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunction() {
        setSupportActionBar(mToolbar) // Передача  ToolBar
+       supportFragmentManager.beginTransaction()
+           .replace(R.id.dataContainer, ChatsFragment()).commit()
        createHeader()  //
        createDrawer()
 
