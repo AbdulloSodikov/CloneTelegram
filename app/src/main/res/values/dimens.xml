@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_app_large">16dp</dimen>
+    <dimen name="margin_app_norm">10dp</dimen>
+    <dimen name="margin_horizontal_norm">10dp</dimen>
+    <dimen name="margin_vertical_norm">10dp</dimen>
+    <dimen name="margin_vertical_large">16dp</dimen>
+
+    <dimen name="largeTextSize">16sp</dimen>
+    <dimen name="normalTextSize">14sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+
+    <!--Settings-->
+    <dimen name="settings_user_photo_width">55dp</dimen>
+    <dimen name="settings_user_photo_height">55dp</dimen>
+    <dimen name="settings_user_photo_border">2dp</dimen>
+
+    <dimen name="settings_user_change_photo_width">45dp</dimen>
+    <dimen name="settings_user_change_photo_height">45dp</dimen>
+    <dimen name="settings_ripple_effect_radius">4dp</dimen>
+
+</resources>
