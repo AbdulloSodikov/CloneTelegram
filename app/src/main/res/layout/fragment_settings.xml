@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +12,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/settings_header_block"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/settings_header_height"
         android:background="@color/colorPrimary"
-         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +29,7 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/setting_user_name"
@@ -63,8 +64,8 @@
         android:layout_height="@dimen/settings_user_change_photo_height"
         android:layout_margin="@dimen/margin_app_large"
         android:src="@drawable/ic_add_image_5"
-        app:civ_circle_background_color="@color/white"
         app:civ_border_color="@color/grey"
+        app:civ_circle_background_color="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/settings_header_block"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_header_block" />
@@ -83,10 +84,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/settings_btn_number_change_phone"
-        app:layout_constraintTop_toBottomOf="@+id/settings_text_account"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/settings_buttons"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/settings_buttons">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
 
         <TextView
             android:id="@+id/settings_text_phone"

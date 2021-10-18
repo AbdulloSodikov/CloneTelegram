@@ -6,6 +6,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:background">@color/colorPrimary</item>
+        <item name="popupTheme">@style/actionMenu</item>
     </style>
 
 
@@ -19,7 +20,6 @@
         <item name="android:layout_marginEnd">@dimen/margin_horizontal_norm</item>
 
     </style>
-
 
     <style name="normal_text">
         <item name="android:layout_width">wrap_content</item>
@@ -47,11 +47,11 @@
         <item name="android:background">@color/grey</item>
     </style>
 
-    <style name="settings_buttons_clickable" parent="settings_buttons">
-        <item name="android:background">@drawable/ripple_effect</item>
-        <item name="android:clickable">true</item>
-        <item name="android:focusable">true</item>
-    </style>
+    <!-- тема для settings action menu-->
+   <style name="actionMenu" parent="Theme.AppCompat.Light">
+       <item name="background">@color/white</item>
+       <item name="actionMenuTextColor">@color/black</item>
+   </style>
 
 
 
