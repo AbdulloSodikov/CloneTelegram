@@ -8,27 +8,22 @@
     tools:context=".ui.fragment.EnterPhoneNumberFragment">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_phone_number"
+    <EditText
+        android:id="@+id/register_text_phone_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_app_norm"
+        android:layout_margin="@dimen/margin_horizontal_norm"
+        android:hint="@string/register_hint_enter_your_phone"
+        android:minHeight="48dp"
+        android:padding="@dimen/appPadding"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="@dimen/normalTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/register_text_phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/register_hint_enter_your_phone"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            android:padding="@dimen/appPadding"
-            android:textSize="@dimen/normalTextSize"
-            tools:ignore="TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </EditText>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/register_btn_next"
@@ -42,7 +37,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

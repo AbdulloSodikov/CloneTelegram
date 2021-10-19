@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.ak.sodikov.clonetelegram.R
 
-fun Fragment.shawToast(message : String) {
+fun Fragment.showToast(message : String) {
     Toast.makeText(this.context,message,Toast.LENGTH_SHORT).show()
 }
 fun AppCompatActivity.replaceActivity(activity: AppCompatActivity) {
