@@ -1,11 +1,15 @@
 package com.ak.sodikov.clonetelegram
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.ak.sodikov.clonetelegram.activities.RegisterActivity
 import com.ak.sodikov.clonetelegram.databinding.ActivityMainBinding
 import com.ak.sodikov.clonetelegram.objects.AppDrawer
 import com.ak.sodikov.clonetelegram.ui.fragment.ChatsFragment
+import com.ak.sodikov.clonetelegram.utilits.replaceActivity
+import com.ak.sodikov.clonetelegram.utilits.replaceFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,15 +33,17 @@ class MainActivity : AppCompatActivity() {
     private fun initFields() {
         mToolbar = mBinding.mainToolbar  // Инициализация ToolBar
         mAppDrawer = AppDrawer(this,mToolbar) // Инициализация AppDrawer для создания Drawer menu
-        initFun ()
+
     }
 
 
     private fun initFun() {
-       setSupportActionBar(mToolbar) // Передача  ToolBar
-       mAppDrawer.create() // Cоздание Drawer menu
-        supportFragmentManager.beginTransaction()
-           .replace(R.id.dataContainer, ChatsFragment()).commit()
-
+        if(false) {
+            setSupportActionBar(mToolbar) // Передача  ToolBar
+            mAppDrawer.create() // Cоздание Drawer menu
+            replaceFragment(ChatsFragment())
+        } else {
+            replaceActivity(RegisterActivity())
+        }
     }
 }

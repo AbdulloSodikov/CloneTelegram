@@ -2,4 +2,22 @@
     <string name="app_name">Clone Telegram</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_default_name_user">Abdullo Sodikov</string>
+    <string name="settings_default_set">в сети</string>
+    <string name="settings_text_account">Аккаунт</string>
+    <string name="settings_text_phone">+992 918 86 58 61</string>
+    <string name="settings_text_click_to_chang_phone">Нажмите, чтобы изменить номер телефона</string>
+    <string name="settings_text_default_login">Логин</string>
+    <string name="settings_text_change_login">Изменить имя пользователя</string>
+
+    <string name="settings_text_about">О себе</string>
+    <string name="settings_text_change_about">Напишите немного о себе</string>
+    <string name="settings_action_menu_change_name">Изменить имя</string>
+    <string name="settings_action_menu_exit">Выход</string>
+    <string name="register_hint_default_code">Введите code</string>
+    <string name="register_text_enter_code">Введите код</string>
+    <string name="register_text_we_sent">Мы отправили СМС с кодом проверки на ваш телефон</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="register_hint_enter_your_phone">Введите номер телефона</string>
+    <string name="register_toast_enter_phone">Введите номер телефона</string>
 </resources>
