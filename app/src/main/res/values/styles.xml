@@ -7,6 +7,8 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="popupTheme">@style/actionMenu</item>
+        <item name="android:colorControlActivated">@color/colorPrimary</item>
+
     </style>
 
 
@@ -53,7 +55,22 @@
        <item name="actionMenuTextColor">@color/black</item>
    </style>
 
+    <style name="edit_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_app_norm</item>
+    </style>
 
+    <style name="edit_text_text"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:padding">@dimen/appPadding</item>
+        <item name="android:textSize">@dimen/normalTextSize</item>
+    </style>
 
 
 </resources>

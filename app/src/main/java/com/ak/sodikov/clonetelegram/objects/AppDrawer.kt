@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.ak.sodikov.clonetelegram.R
 import com.ak.sodikov.clonetelegram.ui.fragment.SettingsFragment
+import com.ak.sodikov.clonetelegram.utilits.replaceFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -100,9 +101,7 @@ class AppDrawer (val mainActivity : AppCompatActivity, val toolbar: Toolbar) {
                 ): Boolean {
                     //Toast.makeText(this@MainActivity,position.toString(),Toast.LENGTH_SHORT).show()
                     when(position){
-                        7 ->  mainActivity.supportFragmentManager.beginTransaction()
-                            .addToBackStack(null) // назад в фрагмент чаты
-                            .replace(R.id.dataContainer, SettingsFragment()).commit()
+                        7 ->  mainActivity.replaceFragment(SettingsFragment())
                     }
                     return false
                 }
